@@ -11,7 +11,7 @@ class UserList extends StateLessWidget {
     return Scaffold(
       appBar:AppBar(
         title:const Text('Lista de Usuários'),
-        actions: <widget>[
+        actions: <Widget>[
           IconButton(onPressed: () {}, icon: const Icon(Icons.add))
         ],
       ),
