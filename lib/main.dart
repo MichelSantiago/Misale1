@@ -1,4 +1,6 @@
 import 'package:misale/provider/users.dart';
+import 'package:misale/routes/app_routes.dart';
+import 'package:misale/views/user_form.dart';
 import 'package:misale/views/user_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,12 +22,15 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Ferramentas',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const UserList(),
+        routes: {
+          AppRoutes.home (_) => UserList(),
+          AppRoutes.user_form: (_) => UserForm()
+        },
       ),
     );
   }
