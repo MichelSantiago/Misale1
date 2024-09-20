@@ -22,13 +22,13 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Ferramentas',
+        title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
         routes: {
-          AppRoutes.home (_) => UserList(),
+          AppRoutes.home: (_) => UserList(),
           AppRoutes.user_form: (_) => UserForm()
         },
       ),

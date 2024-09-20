@@ -29,7 +29,7 @@ class Users with ChangeNotifier {
         _items.containsKey(user.id)) {
       _items.update(
           user.id!,
-          (_) => User(
+              (_) => User(
                 id: user.id,
                 name: user.name,
                 email: user.email,
@@ -40,7 +40,7 @@ class Users with ChangeNotifier {
       final id = Random().nextDouble().toString();
       _items.putIfAbsent(
           id,
-          () => User(
+              () => User(
                 id: id,
                 name: user.name,
                 email: user.email,
@@ -58,4 +58,5 @@ class Users with ChangeNotifier {
       notifyListeners();
     }
   }
+
 }
