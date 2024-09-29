@@ -13,11 +13,11 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final avatar = user.avatarUrl == null || user.avatarUrl!.isEmpty
         ? const CircleAvatar(
-            child: Icon(Icons.person),
-          )
+      child: Icon(Icons.person),
+    )
         : CircleAvatar(
-            backgroundImage: NetworkImage(user.avatarUrl!),
-          );
+      backgroundImage: NetworkImage(user.avatarUrl!),
+    );
     return ListTile(
         leading: avatar,
         title: Text(user.name!),
@@ -27,44 +27,43 @@ class UserTile extends StatelessWidget {
           child: Row(
             children: <Widget>[
               IconButton(
-                onPressed: () {},
                 icon: const Icon(Icons.edit),
                 color: Colors.orange,
-                  onPressed: () {
-                   Navigater.of(context.pushNamed(
-                      AppRoutes.user_form,
-                      arguments: user,
-                   );
-                   },
-                 ),
-             IconButton
-              icon: const Icon(Icons.delete),
-              color: Colors.red,
-              onPressed: () {
-                     showDialog(
-                     context: context,
-                     builder: (ctx) => AlerDialog(
-                          title: const Text('Excluir Usuario'),
-                          content: const Text('Tem Certeza?'),
-                          actions: <Widget>
-                            TextButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.user_form,
+                    arguments: user,
+                  );
+                },
+              ),
+              IconButton(
+                icon: const Icon(Icons.delete),
+                color: Colors.red,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        title: const Text('Excluir Usuário'),
+                        content: const Text('Tem certeza?'),
+                        actions: <Widget>[
+                          TextButton(
                               onPressed: () {
-                               Navigator.of(context).pop();
+                                Navigator.of(context).pop();
                               },
                               child: const Text('Não')),
-                            TextButton(
+                          TextButton(
                               onPressed: () {
-                              Provider.of<Users>(context, listem: false).remove(user);
-                              Navigator.of(context).pop();
-                             },
-                            child: const Text('Sim')),
-                         ],
+                                Provider.of<Users>(context, listen: false)
+                                    .remove(user);
+                                Navigator.of(context).pop();
+                              },
+                              child: const Text('Sim')),
+                        ],
                       ));
-                   },
-                 )
-               ],
-             ),
-           ));
-    }
+                },
+              )
+            ],
+          ),
+        ));
+  }
 }
-

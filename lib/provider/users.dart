@@ -20,9 +20,9 @@ class Users with ChangeNotifier {
   }
 
   void put(User user) {
-    if (user.id == null) {
-      return;
-    }
+    // if (user.id == null) {
+    //   return;
+    // }
 
     if (user.id != null &&
         user.id!.trim().isNotEmpty &&
@@ -30,22 +30,22 @@ class Users with ChangeNotifier {
       _items.update(
           user.id!,
               (_) => User(
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                avatarUrl: user.avatarUrl,
-              ));
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            avatarUrl: user.avatarUrl,
+          ));
     } else {
       //CRIAR
       final id = Random().nextDouble().toString();
       _items.putIfAbsent(
           id,
               () => User(
-                id: id,
-                name: user.name,
-                email: user.email,
-                avatarUrl: user.avatarUrl,
-              ));
+            id: id,
+            name: user.name,
+            email: user.email,
+            avatarUrl: user.avatarUrl,
+          ));
     }
 
     notifyListeners();
@@ -58,5 +58,4 @@ class Users with ChangeNotifier {
       notifyListeners();
     }
   }
-
 }
