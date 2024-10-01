@@ -11,6 +11,13 @@ void main() {
   runApp(const MyApp());
 }
 
+/*Scaffold(
+appBar:AppBar(
+title:Text("logo1")
+),
+body:Ink.image.asset(image/logo1.png)
+)*/
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
