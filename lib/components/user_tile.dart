@@ -28,7 +28,7 @@ class UserTile extends StatelessWidget {
             children: <Widget>[
               IconButton(
                 icon: const Icon(Icons.edit),
-                color: Colors.orange,
+                color: Color(0xFFF58524),
                 onPressed: () {
                   Navigator.of(context).pushNamed(
                     AppRoutes.user_form,
@@ -38,7 +38,8 @@ class UserTile extends StatelessWidget {
               ),
               IconButton(
                 icon: const Icon(Icons.delete),
-                color: Colors.red,
+                color: Color(0XFFF92B7F),
+
                 onPressed: () {
                   showDialog(
                       context: context,

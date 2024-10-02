@@ -34,8 +34,10 @@ class _UserFormState extends State<UserForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Formulário de Usuário'),
+        backgroundColor: (Colors.black),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.save),
