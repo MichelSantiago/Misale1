@@ -13,9 +13,9 @@ class UserList extends StatelessWidget {
     final Users users = Provider.of(context);
 
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: const Text('Lista de Usuários'),
+          title: const Text('Lista de produtos'),
           backgroundColor: Colors.black,
           actions: <Widget>[
             IconButton(

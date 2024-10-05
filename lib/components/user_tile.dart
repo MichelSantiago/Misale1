@@ -13,11 +13,12 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final avatar = user.avatarUrl == null || user.avatarUrl!.isEmpty
         ? const CircleAvatar(
-      child: Icon(Icons.person),
+        child: Icon(Icons.person),
     )
         : CircleAvatar(
       backgroundImage: NetworkImage(user.avatarUrl!),
     );
+
     return ListTile(
         leading: avatar,
         title: Text(user.name!),
@@ -60,11 +61,18 @@ class UserTile extends StatelessWidget {
                               },
                               child: const Text('Sim')),
                         ],
+
                       ));
                 },
+
               )
+
             ],
+
           ),
+
         ));
   }
+
 }
+

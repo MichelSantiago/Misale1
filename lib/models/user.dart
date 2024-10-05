@@ -7,6 +7,7 @@ class User {
   final String? id;
   final String? name;
   final String? email;
+  final String? quant;
   final String? avatarUrl;
 
   /*
@@ -19,6 +20,7 @@ class User {
     this.id,
     this.name,
     this.email,
+    this.quant,
     this.avatarUrl,
   });
 }

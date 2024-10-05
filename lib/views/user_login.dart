@@ -8,7 +8,7 @@ class UserLogin extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.black,
+        color: Colors.white,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -16,9 +16,11 @@ class UserLogin extends StatelessWidget {
               height: 128,
               child: Image.network('assets/imagens/login.png'),
             ),
+
             SizedBox(
               height: 20,
             ),
+
             TextFormField(
               // autofocus: true,
               keyboardType: TextInputType.emailAddress,
@@ -32,9 +34,11 @@ class UserLogin extends StatelessWidget {
               ),
               style: TextStyle(fontSize: 20),
             ),
+
             SizedBox(
               height: 10,
             ),
+
             TextFormField(
               // autofocus: true,
               keyboardType: TextInputType.text,
@@ -53,6 +57,7 @@ class UserLogin extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
+
             Container(
               height: 60,
               alignment: Alignment.centerLeft,

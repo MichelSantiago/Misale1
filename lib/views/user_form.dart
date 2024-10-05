@@ -17,7 +17,7 @@ class _UserFormState extends State<UserForm> {
     _formData['id'] = user.id!;
     _formData['name'] = user.name!;
     _formData['email'] = user.email!;
-    _formData['avatarUrl'] = user.avatarUrl!;
+   _formData['avatarUrl'] = user.avatarUrl!;
   }
 
   @override
@@ -34,9 +34,9 @@ class _UserFormState extends State<UserForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Formulário de Usuário'),
+        title: const Text('Cadastrar produto'),
         backgroundColor: (Colors.black),
         actions: <Widget>[
           IconButton(
@@ -73,7 +73,7 @@ class _UserFormState extends State<UserForm> {
                   //VALIDADOR CAMPO NOME
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
-                      return 'Informe um novme válido.';
+                      return 'Informe um nome válido.';
                     }
 
                     if (value.trim().length < 3) {
@@ -88,11 +88,13 @@ class _UserFormState extends State<UserForm> {
                   decoration: const InputDecoration(labelText: 'E-mail'),
                   onSaved: (value) => _formData['email'] = value!,
                 ),
+
                 TextFormField(
                   initialValue: _formData['avatarUrl'],
                   decoration: const InputDecoration(labelText: 'Url do Avatar'),
                   onSaved: (value) => _formData['avatarUrl'] = value!,
                 ),
+
               ],
             )),
       ),

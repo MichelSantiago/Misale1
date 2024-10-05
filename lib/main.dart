@@ -11,13 +11,6 @@ void main() {
   runApp(const MyApp());
 }
 
-/*Scaffold(
-appBar:AppBar(
-title:Text("logo1")
-),
-body:Ink.image.asset(image/logo1.png)
-)*/
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -33,7 +26,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Misale Ferramentas',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
           useMaterial3: true,
         ),
         routes: {
