@@ -13,7 +13,7 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final avatar = user.avatarUrl == null || user.avatarUrl!.isEmpty
         ? const CircleAvatar(
-        child: Icon(Icons.person),
+      child: Icon(Icons.person),
     )
         : CircleAvatar(
       backgroundImage: NetworkImage(user.avatarUrl!),
@@ -21,8 +21,8 @@ class UserTile extends StatelessWidget {
 
     return ListTile(
         leading: avatar,
-        title: Text(user.name!),
-        subtitle: Text(user.email!),
+        title: Text(user.codigo!),
+        subtitle: Text(user.descricao!),
         trailing: SizedBox(
           width: 100,
           child: Row(
@@ -45,7 +45,7 @@ class UserTile extends StatelessWidget {
                   showDialog(
                       context: context,
                       builder: (ctx) => AlertDialog(
-                        title: const Text('Excluir Usuário'),
+                        title: const Text('Excluir produto'),
                         content: const Text('Tem certeza?'),
                         actions: <Widget>[
                           TextButton(
@@ -61,18 +61,12 @@ class UserTile extends StatelessWidget {
                               },
                               child: const Text('Sim')),
                         ],
-
                       ));
                 },
-
               )
-
             ],
-
           ),
-
         ));
   }
-
 }
 

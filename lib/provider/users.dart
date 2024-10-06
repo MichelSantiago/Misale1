@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:misale/data/dummy_users.dart';
 import 'package:misale/models/user.dart';
 import 'package:flutter/material.dart';
@@ -31,8 +30,8 @@ class Users with ChangeNotifier {
           user.id!,
               (_) => User(
             id: user.id,
-            name: user.name,
-            email: user.email,
+            codigo: user.codigo,
+            descricao: user.descricao,
             avatarUrl: user.avatarUrl,
           ));
     } else {
@@ -42,8 +41,8 @@ class Users with ChangeNotifier {
           id,
               () => User(
             id: id,
-            name: user.name,
-            email: user.email,
+            codigo: user.codigo,
+            descricao: user.descricao,
             avatarUrl: user.avatarUrl,
           ));
     }

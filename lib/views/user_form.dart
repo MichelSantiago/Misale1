@@ -15,9 +15,9 @@ class _UserFormState extends State<UserForm> {
 
   void _loadFormData(User user) {
     _formData['id'] = user.id!;
-    _formData['name'] = user.name!;
-    _formData['email'] = user.email!;
-   _formData['avatarUrl'] = user.avatarUrl!;
+    _formData['codigo'] = user.codigo!;
+    _formData['descricao'] = user.descricao!;
+    _formData['avatarUrl'] = user.avatarUrl!;
   }
 
   @override
@@ -34,9 +34,10 @@ class _UserFormState extends State<UserForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Cadastrar produto'),
+
         backgroundColor: (Colors.black),
         actions: <Widget>[
           IconButton(
@@ -50,8 +51,8 @@ class _UserFormState extends State<UserForm> {
                 Provider.of<Users>(context, listen: false).put(
                   User(
                     id: _formData['id'],
-                    name: _formData['name'],
-                    email: _formData['email'],
+                    codigo: _formData['codigo'],
+                    descricao: _formData['descricao'],
                     avatarUrl: _formData['avatarUrl'],
                   ),
                 );
@@ -63,36 +64,53 @@ class _UserFormState extends State<UserForm> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
+
         child: Form(
             key: _form,
             child: Column(
-              children: <Widget>[
+                children: <Widget>[
                 TextFormField(
-                  initialValue: _formData['name'],
-                  decoration: const InputDecoration(labelText: 'Nome'),
+                  initialValue: _formData['codigo'],
+                  decoration: const InputDecoration(labelText: 'Código'),
+                  style:TextStyle(
+                   fontSize:40,
+                   color: Colors.white
+
+            ),
                   //VALIDADOR CAMPO NOME
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
-                      return 'Informe um nome válido.';
+                      return 'Informe um código válido.';
                     }
 
                     if (value.trim().length < 3) {
-                      return 'Informe um nome com no mínimo três letras.';
+                      return 'Informe um código com no mínimo três letras.';
                     }
                     return null;
                   },
-                  onSaved: (value) => _formData['name'] = value!,
+                  onSaved: (value) => _formData['codigo'] = value!,
                 ),
                 TextFormField(
-                  initialValue: _formData['email'],
-                  decoration: const InputDecoration(labelText: 'E-mail'),
-                  onSaved: (value) => _formData['email'] = value!,
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white
+                  ),
+                  initialValue: _formData['descricao'],
+                  decoration: const InputDecoration(labelText: 'Descrição do produto'),
+                  onSaved: (value) => _formData['descricao'] = value!,
+
                 ),
 
                 TextFormField(
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white
+                  ),
+
                   initialValue: _formData['avatarUrl'],
                   decoration: const InputDecoration(labelText: 'Url do Avatar'),
                   onSaved: (value) => _formData['avatarUrl'] = value!,
+
                 ),
 
               ],

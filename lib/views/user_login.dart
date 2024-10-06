@@ -8,7 +8,7 @@ class UserLogin extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.white,
+        color: Colors.black,
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -55,11 +55,12 @@ class UserLogin extends StatelessWidget {
             ),
 
             SizedBox(
-              height: 40,
+              height: 60,
             ),
 
             Container(
               height: 60,
+              width: 220,
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                 gradient: LinearGradient(

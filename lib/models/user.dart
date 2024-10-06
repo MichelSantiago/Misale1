@@ -5,9 +5,8 @@
 
 class User {
   final String? id;
-  final String? name;
-  final String? email;
-  final String? quant;
+  final String? codigo;
+  final String? descricao;
   final String? avatarUrl;
 
   /*
@@ -18,9 +17,8 @@ class User {
   //Construtor do tipo constante pois todas variávies são do tipo final
   const User({
     this.id,
-    this.name,
-    this.email,
-    this.quant,
+    this.codigo,
+    this.descricao,
     this.avatarUrl,
   });
 }
