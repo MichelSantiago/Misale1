@@ -7,7 +7,7 @@ class UserLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 60, left: 40, right: 40),
+        padding: EdgeInsets.only(top: 120, left: 40, right: 40),
         color: Colors.black,
         child: ListView(
           children: <Widget>[
@@ -25,7 +25,7 @@ class UserLogin extends StatelessWidget {
               // autofocus: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
-                labelText: "E-mail",
+                labelText: "Nome",
                 labelStyle: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
@@ -66,7 +66,7 @@ class UserLogin extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
-                  stops: [0.3, 1],
+                  stops: [0.1, 1],
                   colors: [
                     Color(0xFFF58524),
                     Color(0XFFF92B7F),

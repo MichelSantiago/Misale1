@@ -19,15 +19,18 @@ class UserList extends StatelessWidget {
           backgroundColor: Colors.black,
 
           actions: <Widget>[
+
             IconButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed(AppRoutes.user_form);
                 },
+
                 icon: const Icon(Icons.add)),
 
           ],
         ),
         body: ListView.builder(
+
             itemCount: users.count,
             itemBuilder: (ctx, i) => UserTile(users.byIndex(i))));
   }
