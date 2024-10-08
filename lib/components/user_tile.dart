@@ -13,7 +13,9 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final avatar = user.avatarUrl == null || user.avatarUrl!.isEmpty
         ? const CircleAvatar(
-      child: Icon(Icons.person),
+           child: Icon(Icons.person),
+
+
     )
         : CircleAvatar(
       backgroundImage: NetworkImage(user.avatarUrl!),
@@ -26,15 +28,18 @@ class UserTile extends StatelessWidget {
         trailing: SizedBox(
           width: 100,
           child: Row(
+
+
             children: <Widget>[
               IconButton(
                 icon: const Icon(Icons.edit),
                 color: Color(0xFFF58524),
-                onPressed: () {
+                 onPressed: () {
                   Navigator.of(context).pushNamed(
                     AppRoutes.user_form,
                     arguments: user,
                   );
+
                 },
               ),
               IconButton(
@@ -63,6 +68,7 @@ class UserTile extends StatelessWidget {
                         ],
                       ));
                 },
+
               )
             ],
           ),

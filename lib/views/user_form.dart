@@ -34,11 +34,10 @@ class _UserFormState extends State<UserForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black87,
       appBar: AppBar(
         title: const Text('Cadastrar produto'),
 
-        backgroundColor: (Colors.black),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.save),
@@ -62,8 +61,13 @@ class _UserFormState extends State<UserForm> {
           )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15),
+      body: Container(
+        margin: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(60),
+        decoration: BoxDecoration(
+          color: Colors.black54,
+          borderRadius: BorderRadius.circular(16),
+        ),
 
         child: Form(
             key: _form,
@@ -74,7 +78,8 @@ class _UserFormState extends State<UserForm> {
                   decoration: const InputDecoration(labelText: 'Código'),
                   style:TextStyle(
                    fontSize:40,
-                   color: Colors.white
+                   color: Colors.white,
+
 
             ),
                   //VALIDADOR CAMPO NOME
@@ -108,7 +113,7 @@ class _UserFormState extends State<UserForm> {
                   ),
 
                   initialValue: _formData['avatarUrl'],
-                  decoration: const InputDecoration(labelText: 'Url do Avatar'),
+                  decoration: const InputDecoration(labelText: 'Locação'),
                   onSaved: (value) => _formData['avatarUrl'] = value!,
 
                 ),

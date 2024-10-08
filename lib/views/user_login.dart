@@ -6,37 +6,41 @@ class UserLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Container(
-        padding: EdgeInsets.only(top: 120, left: 40, right: 40),
+        margin: EdgeInsets.all(8),
+        padding: EdgeInsets.only(top: 50, left: 60, right: 10),
         color: Colors.black,
         child: ListView(
           children: <Widget>[
             SizedBox(
-              width: 128,
-              height: 128,
+              width: 140,
+              height: 140,
               child: Image.network('assets/imagens/login.png'),
             ),
 
             SizedBox(
-              height: 20,
+              height: 80,
             ),
 
             TextFormField(
-              // autofocus: true,
+              autofocus: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 labelText: "Nome",
                 labelStyle: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 30,
                 ),
+
               ),
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 40),
+
             ),
 
             SizedBox(
-              height: 10,
+              height: 50,
             ),
 
             TextFormField(
@@ -47,15 +51,15 @@ class UserLogin extends StatelessWidget {
                 labelText: "Senha",
                 labelStyle: TextStyle(
                   color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 30,
                 ),
               ),
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 40),
             ),
 
             SizedBox(
-              height: 60,
+              height: 100,
             ),
 
             Container(
