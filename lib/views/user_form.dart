@@ -37,6 +37,8 @@ class _UserFormState extends State<UserForm> {
       backgroundColor: Colors.black87,
       appBar: AppBar(
         title: const Text('Cadastrar produto'),
+        backgroundColor: Colors.orangeAccent,
+        iconTheme: IconThemeData(color: Colors.black),
 
         actions: <Widget>[
           IconButton(
@@ -65,7 +67,7 @@ class _UserFormState extends State<UserForm> {
         margin: EdgeInsets.all(8),
         padding: const EdgeInsets.all(60),
         decoration: BoxDecoration(
-          color: Colors.black54,
+          color: Colors.black87,
           borderRadius: BorderRadius.circular(16),
         ),
 
