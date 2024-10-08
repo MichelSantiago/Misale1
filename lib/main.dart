@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Misale Ferramentas',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           useMaterial3: true,
         ),
         routes: {

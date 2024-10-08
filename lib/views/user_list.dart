@@ -18,7 +18,7 @@ class UserList extends StatelessWidget {
         appBar: AppBar(
            title: const Text('Lista de produtos'),
           backgroundColor: Colors.orangeAccent,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.white),
 
            actions: <Widget>[
             IconButton(
@@ -32,7 +32,7 @@ class UserList extends StatelessWidget {
         ),
 
         body: Card(
-          color: Colors.black87,
+          color: Colors.white30,
           margin: EdgeInsets.all(8),
 
           child: ListView.builder(

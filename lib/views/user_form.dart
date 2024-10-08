@@ -18,6 +18,7 @@ class _UserFormState extends State<UserForm> {
     _formData['codigo'] = user.codigo!;
     _formData['descricao'] = user.descricao!;
     _formData['avatarUrl'] = user.avatarUrl!;
+
   }
 
   @override
@@ -34,12 +35,11 @@ class _UserFormState extends State<UserForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Cadastrar produto'),
-        backgroundColor: Colors.orangeAccent,
-        iconTheme: IconThemeData(color: Colors.black),
 
+        backgroundColor: (Colors.orangeAccent),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.save),
@@ -63,27 +63,23 @@ class _UserFormState extends State<UserForm> {
           )
         ],
       ),
-      body: Container(
-        margin: EdgeInsets.all(8),
-        padding: const EdgeInsets.all(60),
-        decoration: BoxDecoration(
-          color: Colors.black87,
-          borderRadius: BorderRadius.circular(16),
-        ),
+      body: Padding(
+        padding: const EdgeInsets.all(15),
 
         child: Form(
             key: _form,
             child: Column(
-                children: <Widget>[
+              children: <Widget>[
                 TextFormField(
                   initialValue: _formData['codigo'],
-                  decoration: const InputDecoration(labelText: 'Código'),
-                  style:TextStyle(
-                   fontSize:40,
-                   color: Colors.white,
-
-
-            ),
+                  decoration: const InputDecoration(
+                    labelText: "Codigo",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                    ),
+                  ),
                   //VALIDADOR CAMPO NOME
                   validator: (value) {
                     if (value == null || value.trim().isEmpty) {
@@ -99,23 +95,37 @@ class _UserFormState extends State<UserForm> {
                 ),
                 TextFormField(
                   style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.white
+                      fontSize: 20,
+                      color: Colors.white
                   ),
                   initialValue: _formData['descricao'],
-                  decoration: const InputDecoration(labelText: 'Descrição do produto'),
+                  decoration: const InputDecoration(
+                    labelText: "Descricao",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                    ),
+                  ),
                   onSaved: (value) => _formData['descricao'] = value!,
 
                 ),
 
                 TextFormField(
                   style: TextStyle(
-                    fontSize: 40,
-                    color: Colors.white
+                      fontSize: 20,
+                      color: Colors.white
                   ),
 
                   initialValue: _formData['avatarUrl'],
-                  decoration: const InputDecoration(labelText: 'Locação'),
+                  decoration: const InputDecoration(
+                    labelText: "AvatarUrl",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                    ),
+                  ),
                   onSaved: (value) => _formData['avatarUrl'] = value!,
 
                 ),
