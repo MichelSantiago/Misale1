@@ -1,4 +1,3 @@
-
 import 'package:misale/components/user_tile.dart';
 import 'package:misale/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -16,19 +15,19 @@ class UserList extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.black87,
         appBar: AppBar(
-           title: const Text('Lista de produtos'),
+          title: const Text('Lista de produtos'),
           backgroundColor: Colors.orangeAccent,
           iconTheme: IconThemeData(color: Colors.white),
 
-           actions: <Widget>[
+          actions: <Widget>[
             IconButton(
                 onPressed: () {
                   Navigator.of(context).pushNamed(AppRoutes.user_form);
                 },
                 icon: const Icon(Icons.add,
-                color: Colors.black,)),
+                  color: Colors.black,)),
 
-          ],
+           ],
         ),
 
         body: Card(
@@ -36,10 +35,10 @@ class UserList extends StatelessWidget {
           margin: EdgeInsets.all(8),
 
           child: ListView.builder(
-           itemCount: users.count,
-           itemBuilder: (ctx, i) => UserTile(users.byIndex(i))
+              itemCount: users.count,
+              itemBuilder: (ctx, i) => UserTile(users.byIndex(i))
 
-        ),
+          ),
 
 
         ));

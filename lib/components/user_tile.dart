@@ -1,3 +1,4 @@
+
 import 'package:misale/models/user.dart';
 import 'package:misale/provider/users.dart';
 import 'package:misale/routes/app_routes.dart';
@@ -13,7 +14,7 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final avatar = user.avatarUrl == null || user.avatarUrl!.isEmpty
         ? const CircleAvatar(
-           child: Icon(Icons.person),
+          child: Icon(Icons.person),
 
 
     )
@@ -34,7 +35,7 @@ class UserTile extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.edit),
                 color: Color(0xFFF58524),
-                 onPressed: () {
+                onPressed: () {
                   Navigator.of(context).pushNamed(
                     AppRoutes.user_form,
                     arguments: user,
@@ -75,4 +76,3 @@ class UserTile extends StatelessWidget {
         ));
   }
 }
-

@@ -10,7 +10,6 @@ class UserForm extends StatefulWidget {
 
 class _UserFormState extends State<UserForm> {
   final _form = GlobalKey<FormState>();
-
   final Map<String, String> _formData = {};
 
   void _loadFormData(User user) {
@@ -126,7 +125,7 @@ class _UserFormState extends State<UserForm> {
                       fontSize: 20,
                     ),
                   ),
-                  onSaved: (value) => _formData['avatarUrl'] = value!,
+                  onSaved: (value) => _formData['Locação'] = value!,
 
                 ),
 

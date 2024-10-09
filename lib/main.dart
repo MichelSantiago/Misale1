@@ -6,7 +6,6 @@ import 'package:misale/views/user_login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -23,12 +22,11 @@ class MyApp extends StatelessWidget {
           create: (ctx) => Users(),
         )
       ],
-      child: MaterialApp(
+       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Misale Ferramentas',
         theme: ThemeData(
-         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-          useMaterial3: true,
+         useMaterial3: true,
         ),
         routes: {
           AppRoutes.home: (_) => UserLogin(),
