@@ -1,3 +1,4 @@
+
 import 'package:misale/models/user.dart';
 import 'package:misale/provider/users.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class _UserFormState extends State<UserForm> {
     _formData['id'] = user.id!;
     _formData['codigo'] = user.codigo!;
     _formData['descricao'] = user.descricao!;
+    _formData['Quantidade'] = user.quantidade!;
     _formData['avatarUrl'] = user.avatarUrl!;
 
   }
@@ -53,6 +55,7 @@ class _UserFormState extends State<UserForm> {
                     id: _formData['id'],
                     codigo: _formData['codigo'],
                     descricao: _formData['descricao'],
+                    quantidade: _formData['quantidade'],
                     avatarUrl: _formData['avatarUrl'],
                   ),
                 );
@@ -107,6 +110,23 @@ class _UserFormState extends State<UserForm> {
                     ),
                   ),
                   onSaved: (value) => _formData['descricao'] = value!,
+
+                ),
+                TextFormField(
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white
+                  ),
+                  initialValue: _formData['quantidade'],
+                  decoration: const InputDecoration(
+                    labelText: "Quantidade",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                    ),
+                  ),
+                  onSaved: (value) => _formData['quantidade'] = value!,
 
                 ),
 

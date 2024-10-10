@@ -32,6 +32,7 @@ class Users with ChangeNotifier {
             id: user.id,
             codigo: user.codigo,
             descricao: user.descricao,
+            quantidade: user.quantidade,
             avatarUrl: user.avatarUrl,
           ));
     } else {
@@ -43,6 +44,7 @@ class Users with ChangeNotifier {
             id: id,
             codigo: user.codigo,
             descricao: user.descricao,
+            quantidade: user.quantidade,
             avatarUrl: user.avatarUrl,
           ));
     }

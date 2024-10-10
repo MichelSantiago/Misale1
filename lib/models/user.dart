@@ -7,6 +7,7 @@ class User {
   final String? id;
   final String? codigo;
   final String? descricao;
+  final String? quantidade;
   final String? avatarUrl;
 
   /*
@@ -19,6 +20,7 @@ class User {
     this.id,
     this.codigo,
     this.descricao,
+    this.quantidade,
     this.avatarUrl,
   });
 }
